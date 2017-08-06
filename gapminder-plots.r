@@ -7,4 +7,4 @@ library(ggplot2)
 ggplot(gapminder, aes (x = gdpPercap, y = lifeExp)) + 
   geom_point(aes(color = continent)) +
   scale_x_log10(20) +
-  geom_smooth()
+  geom_smooth(method = lm, color ="red")

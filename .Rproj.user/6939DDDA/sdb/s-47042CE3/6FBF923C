@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "download.file(\"https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder-FiveYearData.csv\",\n              \"data/gapminder-FiveYears.csv\")\ngapminder <- read.csv(\"data/gapminder-FiveYears.csv\")\n\nlibrary(ggplot2)\n\nggplot(gapminder, aes (x = gdpPercap, y = lifeExp)) + \n  geom_point(aes(color = continent)) +\n  scale_x_log10(20) +\n  geom_smooth(method = lm, color =\"red\")\n\njapan_gapminder <- gapminder[gapminder$country == \"Japan\",]\n\nggplot(japan_gapminder, aes(x = year, y = lifeExp)) +\n  geom_line(color = \"coral\") +\n  ylab(\"life expectancy\") + xlab(\"Year\")\n",
+    "created" : 1502037298658.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1601655168",
+    "id" : "6FBF923C",
+    "lastKnownWriteTime" : 1502046321,
+    "last_content_update" : 1502046321533,
+    "path" : "C:/Users/Deanna Perez/gapminder-plots/gapminder-plots.r",
+    "project_path" : "gapminder-plots.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
